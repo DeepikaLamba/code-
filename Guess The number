@@ -1,0 +1,20 @@
+# VBA Script
+
+Sub Guessnum()
+Dim guess As Integer, num As Integer
+guess = InputBox("guess the num")
+num = WorksheetFunction.RandBetween(1, 100)
+Do While guess <> num
+If guess > num + 10 Then
+MsgBox "number is " & num & " guess is " & guess & " Too high"
+Exit Sub
+ElseIf guess < num - 10 Then
+MsgBox "number is " & num & " guess is " & guess & " Too low"
+Exit Sub
+Else
+MsgBox "number is " & num & " guess is " & guess & " close"
+Exit Sub
+End If
+Loop
+MsgBox " equal "
+End Sub
