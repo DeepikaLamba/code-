@@ -1,0 +1,9 @@
+# VBA SCript
+
+Sub appendSheetname()
+x = Worksheets.count
+For i = 1 To x
+Worksheets(i).Name = Worksheets(i).Name + "_DL"
+Next i
+MsgBox x
+End Sub
